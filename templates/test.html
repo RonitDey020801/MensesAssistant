@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bon Voyage</title>
+
+  <link rel="stylesheet" href="/static/css/test.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="/static/js/test.js"></script>
+</head>
+    <body>
+    <img src="/static/images/woman.jpg">
+    <div class="text-center p-5">
+      <h1>Menses Assistant</h1>
+      <h3><i>A woman's friend!</i></h3>
+    </div>
+    <form class="row col-lg-6 needs-validation" action="http://localhost:5000/success" id="fm-fdbk" method="POST" novalidate>
+      <div class="col-md-12 form-group">
+        <label for="identify" class="form-label">You identify as a</label>
+        <select class="form-select" id="identify" name="identify" required>
+          <option selected disabled value="">Choose...</option>
+          <option>Man</option>
+          <option>Woman</option>
+          <option>Other</option>
+          <option>Prefer not to say</option>
+        </select>
+        <div class="invalid-feedback">
+          Please fill this field.
+        </div>
+      </div>
+        
+        <div class="col-md-12 form-group">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" class="form-control" id="age" name="age" min="11" max="50" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Please fill this field.
+            </div>
+        </div>
+        
+        <div class="col-md-12 form-group">
+          <label for="work" class="form-label">Which of the following best describes the nature of your work?</label>
+          <select class="form-select" id="work" name="work" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Student</option>
+            <option>Desk Job (At a place of work such as an office, school, clinic etc.)</option>
+            <option>Remote work (Working from home)</option>
+            <option>Field work (Labourers, domestic help, drivers etc.)</option>
+            <option>Homemaker</option>
+            <option>Physically strenuous work (Sportsperson, fitness trainer, professional dancer etc.)</option>
+          </select>
+          <div class="invalid-feedback">
+            Please fill this field.
+          </div>
+        </div>
+        
+        <div class="col-md-12 form-group">
+          <label for="preg" class="form-label">Have you ever been pregnant?</label>
+          <select class="form-select" id="preg" name="preg" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+          <div class="invalid-feedback">
+            Please fill this field.
+          </div>
+        </div>
+        <div class="col-md-12 form-group" name="disease" id="disease" aria-required="true">
+            <label for="rep_dis" class="form-label">Have you been diagnosed with any of the following by a health care professional?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" name="flexCheckDefault1">
+                <label class="form-check-label" for="flexCheckDefault1">
+                  Ovarian cyst or cysts
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" name="flexCheckDefault2">
+                <label class="form-check-label" for="flexCheckDefault2">
+                  Polycystic ovaries or polycystic ovarian syndrome (PCOS)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" name="flexCheckDefault3">
+                <label class="form-check-label" for="flexCheckDefault3">
+                  Fibroids
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4" name="flexCheckDefault4">
+                <label class="form-check-label" for="flexCheckDefault4">
+                  Endometriosis
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5" name="flexCheckDefault5">
+                <label class="form-check-label" for="flexCheckDefault5">
+                  Anemia
+                </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6" name="flexCheckDefault6">
+              <label class="form-check-label" for="flexCheckDefault6">
+                Premenstrual Dysphoric Disorder (PMDD)
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7" name="flexCheckDefault7">
+              <label class="form-check-label" for="flexCheckDefault7">
+                None
+              </label>
+            </div>
+            <div class="invalid-feedback">
+              Please fill this field.
+            </div>
+        </div>
+        <div class="col-md-12 form-group">
+          <label for="other_dis" class="form-label">Has a doctor or a healthcare professional ever treated you for any health condition(s) other than reproductive?</label>
+          <select class="form-select" id="other_dis" name="other_dis" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+          <div class="invalid-feedback">
+            Please fill this field.
+          </div>
+        </div>
+        <div class="col-md-12 form-group">
+          <label for="other_dis_yes" class="form-label">If yes, please mention here.</label>
+          <input type="text" class="form-control" id="other_dis_yes" name="other_dis_yes" aria-describedby="inputGroupPrepend">
+          <div class="invalid-feedback">
+            Please fill this field.
+          </div>
+        </div>
+
+        <div class="col-md-12 form-group">
+          <label for="meds" class="form-label">Are you on any prescribed medication(s)?</label>
+          <select class="form-select" id="meds" name="meds" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+          <div class="invalid-feedback">
+            Please fill this field.
+          </div>
+        </div>
+        <div class="col-md-12 form-group">
+          <label for="meds_yes" class="form-label">If yes, what are they for?</label>
+          <input type="text" class="form-control" id="meds_yes" name="meds_yes" aria-describedby="inputGroupPrepend">
+          <div class="invalid-feedback">
+            Please fill this field.
+          </div>
+        </div>
+        <div class="col-md-12 form-group">
+          <label for="bleed" class="form-label">Type/Intensity of bleeding</label>
+          <select class="form-select" id="bleed" name="bleed" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Heavy (If you need to change your tampon or pad after less than 2 hours)</option>
+            <option>Moderate</option>
+            <option>Low (fewer pad or tampon changes than usual)</option>
+          </select>
+          <div class="invalid-feedback">
+            Please fill this field.
+          </div>
+        </div>
+        <div class="col-md-12 form-group">
+          <label for="sleep" class="form-label">Average hours of sleep per day</label>
+          <select class="form-select" id="sleep" name="sleep" required>
+            <option selected disabled value="">Choose...</option>
+            <option>2-4</option>
+            <option>4-6</option>
+            <option>6-8</option>
+            <option>8-10</option>
+            <option>10-12</option>
+          </select>
+          <div class="invalid-feedback">
+            Please fill this field.
+          </div>
+        </div>
+        <div class="col-md-12 form-group">
+          <label for="food" class="form-label">How often do you eat fast food?</label>
+          <select class="form-select" id="food" name="food" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Daily</option>
+            <option>Often</option>
+            <option>Occasionally</option>
+            <option>Rarely</option>
+            <option>Never</option>
+          </select>
+          <div class="invalid-feedback">
+            Please fill this field.
+          </div>
+        </div>
+        <div class="col-md-12 form-group">
+          <label for="exercise" class="form-label">How often do you engage in moderate physical activity?</label>
+          <select class="form-select" id="exercise" name="exercise" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Daily</option>
+            <option>Often</option>
+            <option>Occasionally</option>
+            <option>Rarely</option>
+            <option>Never</option>
+          </select>
+          <div class="invalid-feedback">
+            Please fill this field.
+          </div>
+        </div>
+        
+        <div class="col-md-12 form-group" name="symptoms" id="symptoms" aria-required="true">
+            <label for="symptoms" class="form-label">Do you usually experience the following symptoms on the days before or during your periods?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault8" name="flexCheckDefault8">
+                <label class="form-check-label" for="flexCheckDefault8">
+                  Abdominal pain
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault9" name="flexCheckDefault9">
+                <label class="form-check-label" for="flexCheckDefault9">
+                  Breast tenderness, abdominal bloating and/or swelling
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault10" name="flexCheckDefault10">
+                <label class="form-check-label" for="flexCheckDefault10">
+                  Bowel issues (diarrhea, nausea, gassiness, constipation)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault11" name="flexCheckDefault11">
+                <label class="form-check-label" for="flexCheckDefault11">
+                  Headache
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault12" name="flexCheckDefault12">
+                <label class="form-check-label" for="flexCheckDefault12">
+                  Lower back pain
+                </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13" name="flexCheckDefault13">
+              <label class="form-check-label" for="flexCheckDefault13">
+                Cravings
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault14" name="flexCheckDefault14">
+              <label class="form-check-label" for="flexCheckDefault14">
+                Mood swings
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault15" name="flexCheckDefault15">
+              <label class="form-check-label" for="flexCheckDefault15">
+                Trouble sleeping
+              </label>
+            </div>
+            <div class="invalid-feedback">
+              Please fill this field.
+            </div>
+        </div>
+
+        <div class="col-md-12 form-group">
+          <label for="sex" class="form-label">Are you sexually active?</label>
+          <select class="form-select" id="sex" name="sex" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Regular intercourse</option>
+            <option>Intercourse on an inconsistent basis</option>
+            <option>No</option>
+            <option>Prefer not to say</option>
+          </select>
+          <div class="invalid-feedback">
+            Please fill this field.
+          </div>
+        </div>
+
+        <div class="col-12 form-group btn-grp">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+        
+    </form>
+    <div class="m-5"></div>
+
+    <script>
+      (function () {
+    'use strict'
+        var forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+            }, false)
+            })
+    })()
+    </script>
+</body>
+</html>
